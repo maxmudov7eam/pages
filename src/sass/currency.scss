@@ -1,0 +1,28 @@
+body {
+    background-color: #fff !important;
+    color: #000 !important;
+    overflow-x: scroll !important;
+
+    .select {
+        padding: 10px 20px;
+        width: 130px
+    }
+
+    .input {
+        padding: 10px 20px;
+    }
+
+    .wrap {
+        border: 1px solid #6563f5;
+        box-shadow: 0 0 10px #bebdeb;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 10px 0 0 0;
+    }
+
+    .myBtn1 {
+        display: flex;
+        margin: 15px auto;
+        border-radius: 50%;
+    }
+}

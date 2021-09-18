@@ -1,0 +1,523 @@
+/********  FONT STYLE  *********/
+
+@font-face {
+    font-family: 'Exo2-bold';
+    src: url(/fonts/static/Exo2-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(/fonts/poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+.regular {
+    font-family: 'Poppins-Regular', sans-serif;
+}
+
+
+@font-face {
+    font-family: 'HindSiliguri-Regular';
+    src: url(/fonts/siliguri/HindSiliguri-Regular.ttf) format('truetype');
+}
+
+.regular {
+    font-family: 'HindSiliguri-Regular', sans-serif;
+}
+
+@font-face {
+    font-family: 'HindSiliguri-Bold';
+    src: url(/fonts/siliguri/HindSiliguri-Bold.ttf) format('truetype');
+}
+
+.bold {
+    font-family: 'HindSiliguri-Bold', sans-serif;
+}
+
+
+@font-face {
+    font-family: 'HindSiliguri-Light';
+    src: url(/fonts/siliguri/HindSiliguri-Light.ttf) format('truetype');
+}
+
+.light {
+    font-family: 'HindSiliguri-Light', sans-serif;
+}
+
+
+@font-face {
+    font-family: 'HindSiliguri-SemiBold';
+    src: url(/fonts/siliguri/HindSiliguri-SemiBold.ttf) format('truetype');
+}
+
+.semibold {
+    font-family: 'HindSiliguri-SemiBold', sans-serif;
+}
+
+
+/**************  COLOR STYLE  *************/
+
+$color-blue: #247CC0;
+$color-black: #030D15;
+$color-red:  #C72535;
+$color-silver: #72777C;
+
+
+
+html {
+    scroll-behavior: smooth;
+    body {
+        color: #000;
+        background-color: #fff;
+	    width: 100%;
+	    overflow-x: hidden;
+    
+        h1,h2,h3,h4,h5,h6,p {
+            margin-bottom: 0 !important;
+        }
+    
+        a {
+            text-decoration: none;
+            color: #000;
+            outline: none !important;
+    
+            &:hover {
+                text-decoration: none !important;
+                color: #666;
+            }
+        }
+    
+        ul,li {
+            list-style: none;
+            margin: 0;
+            padding: 0 !important;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .myBtn {
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            font-weight: 600;
+
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+
+        .loader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            z-index: 9999;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .line {
+            margin-top: 90px;
+        }
+
+        .myNavbar {
+            padding: 31px 0 60px;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background-image: linear-gradient(180deg, #fff, transparent);
+
+            ul {
+                transform: translateX(-30px);
+                li {
+                    a {
+                        color: $color-black;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 23px;
+                        margin-right: 56px;
+                    }
+                }
+            }
+        }
+
+        .header {
+            padding-top: 54px;
+
+            .left {
+                padding-top: 75px;
+
+                h5 {
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0.145em;
+                    text-transform: uppercase;
+                    color: #c93443;
+                    margin-bottom: 3px !important;
+                }
+
+                h1 {
+                    font-size: 61px;
+                    line-height: 73px;
+                    color: $color-black;
+
+                    span {
+                        background-color: #E9F2F9;
+                        color: #247CC0;
+                        display: inline-flex;
+                        padding: 0 10px 0 5px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: #030D15;
+                    opacity: 0.6;
+                    padding: 29px 0 36px 0;
+                }
+
+                .btn {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 26px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    padding: 16px 35px;
+                    background-color: $color-blue;
+                    margin-right: 31px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    line-height: 27px;
+                    margin-right: 18px;
+                    color: #030D15;
+                }
+
+                h4 {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 27px;
+                    text-align: center;
+                    text-decoration-line: line-through;
+                    color: #030D15;
+                    opacity: 0.5;
+                }
+            }
+
+            .right {
+                transform: scale(1.1) translateX(50px) translateY(20px);
+            }
+        }
+
+        .brand {
+
+            .myRow {
+                background: #FFFFFF;
+                box-shadow: 0px 100px 80px rgba(174, 174, 174, 0.08), 0px 43.751px 36.4414px rgba(174, 174, 174, 0.0575083), 0px 19.8401px 19.1406px rgba(174, 174, 174, 0.0476886), 0px 6.77214px 9.61331px rgba(174, 174, 174, 0.04), 0px 0.190079px 4.14347px rgba(174, 174, 174, 0.0323114), 0px -1.73968px 1.20532px rgba(174, 174, 174, 0.0224916);
+                padding: 76px 0;
+            }
+        }
+
+        .inStyle {
+            padding: 132px 0 160px;
+
+            .miniImg { 
+                top: -19px;
+                right: -7px;
+                z-index: 1;
+            }
+
+            h2 {
+                font-size: 25px;
+                line-height: 40px;
+                color: #030D15;
+                margin-bottom: 9px !important;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 21px;
+                color: #030D15;
+                opacity: 0.6;
+                margin-bottom: 20px !important;
+            }
+
+            h3 {
+                font-size: 16px;
+                line-height: 27px;
+                color: #030D15;
+            }
+
+            h4 {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 27px;
+                color: #030D15;
+                opacity: 0.5; 
+            }
+            
+            span {
+                text-decoration-line: line-through;
+            }
+        }
+
+        .compactCamera {
+
+            .myCard {
+                background: linear-gradient(257.26deg, #008BF0 -13.2%, #D943C9 130.95%);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 75px 0 75px 30px;
+
+                .myImg {
+                    right: -12px;
+                    top: 47%;
+                    transform: translateY(-45%);
+                }
+
+                .first {
+                    right: -53px;
+                    top: 44%;
+                    transform: translateY(-45%);
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 27px;
+                    text-transform: uppercase;
+                    color: #F4F9FC;
+                    opacity: 0.6;
+                }
+
+                h3 {
+                    font-weight: 600;
+                    font-size: 31px;
+                    line-height: 40px;
+                    color: #F4F9FC;
+                    margin: 5px 0 7px 0 !important;
+                }
+
+                .btn {
+                    font-size: 14px;
+                    line-height: 27px;
+                    text-transform: uppercase;
+                    color: #F4F9FC;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .popularProducts {
+            padding: 125px 0 146px 0;
+
+            h6 {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 23px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #030D15;
+                margin-top: 56px;  
+                cursor: pointer; 
+            }
+
+            h5 {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 23px;
+                letter-spacing: 0.145em;
+                text-transform: uppercase;
+                color: #C72535;
+                opacity: 0.9;
+            }
+
+            h2 {
+                font-weight: 600;
+                font-size: 44px;
+                line-height: 71px;
+                color: #030D15;
+                margin: 0 0 22px 0 !important; 
+            }
+
+            .card {
+                background: #FFFFFF;
+                border: .5px solid rgba(0, 0, 0, 0.1) !important;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+
+                .card-header {
+                    padding: 35px 37px !important;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 27px;
+                        color: #030D15;
+                    }
+
+                    .klava {
+                        height: 200px;
+                        display: flex;
+                        margin-top: 60px;
+                    }
+                }
+
+                .card-body {
+                    padding: 35px 37px !important;
+                    transition: all .3s ease-in-out;
+                    position: relative;
+                    overflow: hidden;
+
+                    .myIcons {
+                        transition: all .7s ease-in-out;
+                        transform: translateY(10px);
+                        opacity: 0;
+                        z-index: 2;
+                        margin-bottom: 20px;
+                    }
+
+                    .myColors { 
+                        opacity: 0;
+                        transform: translateY(8px);
+                        position: absolute;
+                        bottom: 33px;
+                        right: 40px;
+                        transition: all .3s ease-in-out;
+                    }
+
+                    h2 {
+                        font-weight: 600;
+                        font-size: 25px;
+                        line-height: 40px;
+                        color: #030D15;
+                    }
+
+                    h3 {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 27px;
+                        color: #030D15;
+                        z-index: 2;
+                    }
+
+                    .stars {
+                        z-index: 2;
+                    }
+
+                    h4 {
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 27px;
+                        color: #030D15;
+                        opacity: 0.5;
+                        z-index: 2;
+
+                        span {
+                            text-decoration-line: line-through;
+                        }
+                    }
+                }
+
+                &:hover {
+                    border-color: transparent !important;
+                    box-shadow: 0px 100px 80px rgba(191, 191, 191, 0.07), 0px 41.7776px 33.4221px rgba(191, 191, 191, 0.0503198), 0px 22.3363px 17.869px rgba(191, 191, 191, 0.0417275), 0px 12.5216px 10.0172px rgba(191, 191, 191, 0.035), 0px 6.6501px 5.32008px rgba(191, 191, 191, 0.0282725), 0px 2.76726px 2.21381px rgba(191, 191, 191, 0.0196802);
+
+                    .card-body {
+                        background: #fafafa;
+
+                        .myIcons {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+
+                        .myColors {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                border: none;
+                margin-bottom: 50px;
+
+                .nav-item {
+                    cursor: pointer;
+                    margin-right: 40px;
+                    transition: all .3s ease-in-out;
+    
+                    .nav-link {
+                        transition: all .3s ease-in-out;
+                        margin-bottom: 0;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 23px;
+                        text-transform: uppercase;
+                        color: #030D15;
+                        opacity: 0.6;
+                        font-family: 'Poppins-Regular', sans-serif;
+
+                        &.active, &:hover {
+                            color: $color-red;
+                            opacity: 1;
+                            border: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .facts {
+            padding-bottom: 130px;
+
+            .card {
+                background: #FFFFFF;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+
+                .card-body {
+                    padding: 35px 35px 28px 35px !important;
+                }
+            }
+
+            h5 {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 23px;
+                letter-spacing: 0.145em;
+                text-transform: uppercase;
+                color: #C72535;
+                opacity: 0.9;
+            }
+
+            h2 {
+                font-weight: 600;
+                font-size: 44px;
+                line-height: 71px;
+                color: #030D15;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: #030D15;
+                margin: 8px auto 50px  !important;
+                opacity: 0.6;
+                width: 460px;
+            }
+        }
+    }
+}
+
+
+
+
